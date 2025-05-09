@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+<html lang="sr">
+<head>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="google-site-verification" content="ytQZs1XuPMmqpMr7Ggea0JoEmRPahEU2yZo8x_ZXHss" />
+<title>Pirovetex - Uslužno šivenje i sečenje paspul trake</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100,200,300,400,500,600,700,800,900&amp;family=Lato:wght@100,300,400,700,900&amp;display=swap" rel="stylesheet">
+<style>
+.testimonial p { color: black; }
+
+    :root {
+      --primary-color: #e63946;
+      --secondary-color: #a4161a;
+      --accent-color: #f28482;
+      --light-color: #1c1c1c;
+      --dark-color: #0b090a;
+      --text-color: #ffffff;
+      --white: #ffffff;
+      --secondary-color: #660000;
+      --accent-color: #ff4d4d;
+      --light-color: #1a0000;
+      --dark-color: #000000;
+      --text-color: #f2f2f2;
+      --white: #fff;
+      --secondary-color: #94d2bd;
+      --accent-color: #ee9b00;
+      --light-color: #1a1a1a;
+      --dark-color: #0f0f0f;
+      --text-color: #ddd;
+      --white: #fff;
+      --secondary-color: #83c5be;
+      --accent-color: #ffddd2;
+      --light-color: #edf6f9;
+      --dark-color: #333;
+      --text-color: #444;
+      --white: #fff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+      background-color: var(--dark-color);
+    }
+    
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      color: var(--primary-color);
+      line-height: 1.2;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header & Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--dark-color);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      padding: 15px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar.scrolled {
+      padding: 10px 0;
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+  height: 100px;
+
+      height: 100px;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-link {
+      margin: 0 15px;
+      font-weight: 600;
+      position: relative;
+      padding: 5px 0;
+     color: #8B0000;}
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+    
+    .social-media {
+      display: flex;
+      align-items: center;
+    }
+    
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      margin-left: 15px;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      opacity: 1;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('./Pirovetex_files/680d21b24415fd5d83dc6b2f_favicon 1.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      margin-top: 80px;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      padding: 0 20px;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      color: var(--white);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+    
+    /* Features Section */
+    .features-section {
+      padding: 80px 0;
+      background-color: var(--light-color);
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      font-size: 2.5rem;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    .feature-card {
+      background-color: var(--dark-color);
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+    }
+    
+    .feature-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    
+    /* About Section */
+    .about-section {
+      padding: 80px 0;
+    }
+    
+    .about-container {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+    
+    .about-image {
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .about-content {
+      flex: 1;
+    }
+    
+    .about-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    /* Team Section */
+    .team-section {
+      padding: 80px 0;
+      background-color: var(--light-color);
+      text-align: center;
+    }
+    
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .team-member {
+      background-color: var(--dark-color);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .team-member:hover {
+      transform: translateY(-10px);
+    }
+    
+    .member-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    
+    .member-info {
+      padding: 20px;
+    }
+    
+    .member-name {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    
+    /* Gallery Section */
+    .gallery-section {
+      padding: 80px 0;
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    
+    .gallery-item {
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      height: 250px;
+    }
+    
+    .gallery-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .gallery-item:hover .gallery-image {
+      transform: scale(1.1);
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 0;
+      background-color: var(--primary-color);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .cta-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+    
+    .cta-btn {
+      background-color: var(--dark-color);
+      color: var(--primary-color);
+    }
+    
+    .cta-btn:hover {
+      background-color: var(--accent-color);
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: var(--dark-color);
+      color: var(--white);
+      padding: 60px 0 20px;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-logo {
+      height: 120px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-title {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-link {
+      margin-bottom: 10px;
+      display: block;
+      opacity: 0.8;
+    }
+    
+    .footer-link:hover {
+      opacity: 1;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .about-container {
+        flex-direction: column;
+      }
+      
+      .hero-title {
+        font-size: 2.5rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .section-title, .about-title, .cta-title {
+        font-size: 1.8rem;
+      }
+      
+      .hero-section {
+        margin-top: 60px;
+      }
+    }
+  
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+    
+
+
+.about-content p {
+  color: white;
+}
+/* Responsive for smaller phones */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .features-grid, .gallery-grid, .team-members {
+    grid-template-columns: 1fr !important;
+  }
+
+  form input, form textarea {
+    font-size: 1rem;
+  }
+}
+
+.feature-card p {
+  color: var(--white);
+}
+</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/></link><meta content="Pirovetex nudi profesionalno uslužno šivenje i sečenje paspul trake u Srbiji. Kvalitet, preciznost i pouzdanost. Kontaktirajte nas!" name="description"/><meta content="Pirovetex - Uslužno šivenje i sečenje" property="og:title"/><meta content="Precizno šivenje i sečenje paspul trake po meri." property="og:description"/><meta content="https://tvoj-sajt.com/slika.jpg" property="og:image"/><meta content="https://tvoj-sajt.com/" property="og:url"/><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Pirovetex",
+  "url": "https://tvoj-sajt.com/",
+  "logo": "https://tvoj-sajt.com/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+381-XX-XXXXXXX",
+    "contactType": "Customer Service"
+  }
+}
+</script></head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+<div class="container nav-container">
+<a class="logo" href="#">
+<img alt="Pirovetex Logo" class="logo" src="logo.png"/>
+</a>
+<ul class="nav-menu">
+<li><a class="nav-link" href="#o-nama">O NAMA</a></li>
+<li><a class="nav-link" href="#usluge">USLUGE</a></li>
+<li><a class="nav-link" href="#faq">ČESTA PITANJA</a></li>
+<li><a class="nav-link" href="#kontakt">KONTAKT</a></li>
+</ul>
+<div class="social-media">
+<a href="https://www.facebook.com/profile.php?id=100073785607378" target="_blank"><i class="fab fa-facebook-f social-icon" style="color: white;"></i></a>
+<a href="https://www.instagram.com/pirovetex/" target="_blank"><i class="fab fa-instagram social-icon" style="color: white;"></i></a>
+<a href="https://www.linkedin.com/in/jovan-vojinovic-18ba7b206/" target="_blank"><i class="fab fa-linkedin-in social-icon" style="color: white;"></i></a>
+</div>
+<a class="btn" href="#kontakt">Zatraži ponudu</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section" id="home">
+<video autoplay="" class="hero-video-bg" loop="" muted="" playsinline="">
+<source src="3358672-hd_1920_1080_25fps.mp4" type="video/mp4"/>
+      Vaš pretraživač ne podržava video tag.
+    </video>
+<div class="hero-content">
+<h1 class="hero-title"> Svakim šavom gradimo poverenje</h1>
+<p class="hero-subtitle">Vrhunska usluga šivenja i sečenja paspul trake po povoljnim cenama</p>
+<a class="btn" href="#usluge">Saznaj više</a>
+</div>
+</section>
+<!-- Features Section -->
+<section class="features-section" id="usluge">
+<div class="container">
+<h2 class="section-title">Naše Usluge</h2>
+<div class="features-grid">
+<div class="feature-card"><i class="fa-solid fa-scissors" style="font-size: 40px; margin-bottom: 15px; color: var(--primary-color); display: block;"></i>
+<h3 class="feature-title">Industrijsko šivenje</h3>
+<p>Profesionalna usluga šivenja za velike serije i specijalizovane potrebe.</p>
+</div>
+<div class="feature-card"><i class="fa-solid fa-cut" style="font-size: 40px; margin-bottom: 15px; color: var(--primary-color); display: block;"></i>
+<h3 class="feature-title">Sečenje paspul trake</h3>
+<p>Precizno i brzo sečenje paspul trake svih širina i dužina.</p>
+</div>
+<div class="feature-card"><i class="fa-solid fa-pen-to-square" style="font-size: 40px; margin-bottom: 15px; color: var(--primary-color); display: block;"></i>
+<h3 class="feature-title">Prepravka i popravka</h3>
+<p>Prepravke odeće i popravke tekstilnih proizvoda sa vrhunskim završetkom.</p>
+</div>
+<div class="feature-card"><i class="fa-solid fa-ruler-combined" style="font-size: 40px; margin-bottom: 15px; color: var(--primary-color); display: block;"></i>
+<h3 class="feature-title">Izrada po meri</h3>
+<p>Izrada tekstilnih proizvoda po želji klijenata uz pažljivo birane materijale.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="about-section" id="o-nama">
+<div class="container about-container">
+<div class="about-image">
+<img alt="Pirovetex Radionica" src="pirovetex srebro.png"/>
+</div>
+<div class="about-content">
+<h2 class="about-title">O PIROVETEX</h2>
+<p>Pirovetex, firma osnovana 2021. godine, pruža modernu uslugu šivenja i sečenja paspul trake. Sa svakim šavom gradimo poverenje, svaki naš šav je oličenje vrhunske izrade po veoma povoljnim cenama.</p>
+<p>Sa sedištem u Pirotu, gradimo dugoročna partnerstva kroz transparentnost, profesionalizam i posvećenost vrhunskom kvalitetu. Svaki naš šav nije samo spoj materijala, već i znak poverenja koje stičemo sa vama.
+  Pirovetex, gde tradicija susreće inovaciju, a vaše potrebe postaju naša inspiracija.</p>
+<a class="btn" href="#kontakt" style="margin-top: 20px;">Kontaktirajte nas</a>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<!-- Gallery Section -->
+<!-- FAQ Section -->
+<section class="faq-section" id="faq" style="padding: 80px 0; background-color: var(--light-color); color: var(--text-color);">
+<div class="container">
+<h2 class="section-title">Često postavljana pitanja</h2>
+<div style="max-width: 800px; margin: 0 auto;">
+<div style="margin-bottom: 30px;">
+<h3 style="color: var(--primary-color);">Koje usluge nudite?</h3>
+<p>Pružamo industrijsko šivenje, sečenje paspul trake, prepravke i izradu po meri.</p>
+</div>
+<div style="margin-bottom: 30px;">
+<h3 style="color: var(--primary-color);">Koliko traje izrada po meri?</h3>
+<p>Vreme izrade zavisi od zahteva, ali obično traje između 3 do 7 radnih dana.</p>
+</div>
+<div style="margin-bottom: 30px;">
+<h3 style="color: var(--primary-color);">Da li radite i sa fizičkim licima?</h3>
+<p>Da, radimo kako sa firmama tako i sa pojedincima.</p>
+</div>
+<div style="margin-bottom: 30px;">
+<h3 style="color: var(--primary-color);">Kako mogu da vas kontaktiram?</h3>
+<p>Možete nas kontaktirati putem forme na sajtu, e-maila ili telefona navedenog u sekciji Kontakt.</p>
+</div>
+</div>
+</div>
+<!-- Testimonials Section -->
+<section class="testimonials-section" style="padding: 80px 0; background-color: var(--dark-color); color: var(--white); text-align: center;">
+<div class="container">
+<h2 class="section-title">Zadovoljni klijenti</h2>
+<div class="testimonial-slider" style="position: relative; max-width: 800px; margin: 50px auto; overflow: hidden;">
+<div class="slides" style="display: flex; transition: transform 0.5s ease-in-out;">
+<div class="testimonial" style="min-width: 100%; box-sizing: border-box; padding: 30px; background-color: var(--light-color); border-radius: 10px;">
+<p class="testimonial-paragraph" style="font-style: italic;">„Brza i profesionalna usluga. Svaka preporuka za Pirovetex tim!“</p>
+<h4 style="margin-top: 15px; color: var(--primary-color);">Jelena M., Beograd</h4>
+</div>
+<div class="testimonial" style="min-width: 100%; box-sizing: border-box; padding: 30px; background-color: var(--light-color); border-radius: 10px;">
+<p class="testimonial-paragraph" style="font-style: italic;">„Kvalitet šivenja je iznad očekivanja, a cene su više nego korektne.“</p>
+<h4 style="margin-top: 15px; color: var(--primary-color);">Marko R., Niš</h4>
+</div>
+<div class="testimonial" style="min-width: 100%; box-sizing: border-box; padding: 30px; background-color: var(--light-color); border-radius: 10px;">
+<p class="testimonial-paragraph" style="font-style: italic;">„Odlična komunikacija i ispoštovani svi rokovi. Topla preporuka.“</p>
+<h4 style="margin-top: 15px; color: var(--primary-color);">Ana S., Novi Sad</h4>
+</div>
+</div>
+<button id="prev" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; font-size: 18px;">❮</button>
+<button id="next" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; cursor: pointer; font-size: 18px;">❯</button>
+</div>
+</div>
+</section>
+</section>
+<!-- CTA Section -->
+<section class="cta-section">
+<div class="container">
+<h2 class="cta-title">Treba vam ponuda?</h2>
+<p style="margin-bottom: 30px; font-size: 1.2rem;">Kontaktirajte nas danas i dobijte besplatnu procenu vašeg projekta.</p>
+<a class="btn cta-btn" href="#kontakt">Zatražite ponudu</a>
+</div>
+</section>
+<!-- Footer -->
+<section id="kontakt" style="padding: 60px 20px; background-color: var(--light-color); color: var(--white); text-align: center;">
+<div class="container">
+<h2 class="section-title">Kontaktirajte nas</h2>
+<form action="https://formspree.io/f/xnndjeyq" id="kontakt-forma" method="POST" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
+<input name="_captcha" type="hidden" value="false"/>
+<input name="ime" placeholder="Vaše ime" required="" style="padding: 12px; border-radius: 5px; border: none;" type="text"/>
+<input name="email" placeholder="Vaš email" required="" style="padding: 12px; border-radius: 5px; border: none;" type="email"/>
+<textarea name="poruka" placeholder="Vaša poruka" required="" rows="5" style="padding: 12px; border-radius: 5px; border: none;"></textarea>
+<button class="btn" type="submit">Pošalji Poruku</button>
+<p id="uspeh-poruka" style="display:none; color: green; font-weight: bold; margin-top: 10px;">Uspešno ste poslali poruku!</p>
+</form>
+</div>
+</section>
+<footer class="footer" id="kontakt">
+<div class="container">
+<div class="footer-container">
+<div class="footer-col">
+<img alt="Pirovetex Logo" class="footer-logo" src="logo.png"/>
+<p>Pirovetex pruža vrhunske usluge šivenja i sečenja paspul trake sa fokusom na kvalitet i zadovoljstvo klijenata.</p>
+</div>
+<div class="footer-col">
+<h3 class="footer-title">Usluge</h3>
+<ul class="footer-links">
+<li><a class="footer-link" href="#">Industrijsko šivenje</a></li>
+<li><a class="footer-link" href="#">Sečenje paspul trake</a></li>
+<li><a class="footer-link" href="#">Prepravke i popravke</a></li>
+<li><a class="footer-link" href="#">Izrada po meri</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3 class="footer-title">Kontakt</h3>
+<ul class="footer-links">
+<li><a class="footer-link" href="#">Adresa: Vojvode Putnika 36</a></li>
+<li><a class="footer-link" href="#">Telefon: +381 611888748</a></li>
+<li><a class="footer-link" href="#">Email:pirovetex@gmail.com</a></li>
+<li><a class="footer-link" href="#">Radno vreme: 08-16h</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3 class="footer-title">Pratite nas</h3>
+<div class="social-links">
+<a class="social-link" href="https://www.facebook.com/profile.php?id=100073785607378" target="_blank"><i class="fab fa-facebook-f" style="color:white;"></i></a>
+<a class="social-link" href="https://www.instagram.com/pirovetex/" target="_blank"><i class="fab fa-instagram" style="color:white;"></i></a>
+<a class="social-link" href="https://www.linkedin.com/in/jovan-vojinovic-18ba7b206/" target="_blank"><i class="fab fa-linkedin-in" style="color:white;"></i></a>
+</div></div>
+</div>
+<div class="footer-bottom">
+<p>MB 66165337</p>
+<p>PIB 112529564</p>
+<p>© 2025 Pirovetex. Sva prava zadržana.</p>
+</div>
+</div>
+</footer>
+<script>
+    // Sticky navbar on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelector('.slides');
+  const totalSlides = slides.children.length;
+
+  function updateSlidePosition() {
+    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }
+
+  function showNextSlide() {
+    slideIndex = (slideIndex + 1) % totalSlides;
+    updateSlidePosition();
+  }
+
+  function showPrevSlide() {
+    slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+    updateSlidePosition();
+  }
+
+  document.getElementById('next').addEventListener('click', showNextSlide);
+  document.getElementById('prev').addEventListener('click', showPrevSlide);
+
+  setInterval(showNextSlide, 5000);
+</script>
+<script>
+  const form = document.getElementById("kontakt-forma");
+  const poruka = document.getElementById("uspeh-poruka");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.reset();
+      poruka.style.display = "block";
+      poruka.style.color = "green";
+      poruka.textContent = "Uspešno ste poslali poruku!";
+      setTimeout(() => {
+        poruka.style.display = "none";
+      }, 5000);
+    } else {
+      poruka.style.display = "block";
+      poruka.textContent = "Došlo je do greške. Pokušajte ponovo.";
+      poruka.style.color = "red";
+    }
+  });
+</script>
+</body>
+</html>
